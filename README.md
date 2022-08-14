@@ -1,6 +1,6 @@
 # chrip
 
-A new Flutter project.
+An artificial ornithologist who loves to takes pictures of birds!
 
 ## Getting Started
 
