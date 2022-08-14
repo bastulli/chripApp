@@ -1,10 +1,10 @@
-# chrip
+# Chrip Flutter App
 
 An artificial ornithologist who loves to takes pictures of birds!
 
 ## Getting Started
 
-![Logo](assets\images\ChripLogo.png)
+![](assets/images/ChripLogo.png)
 
 This project is a starting point for this Flutter application.
 
