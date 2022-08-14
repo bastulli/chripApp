@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:loginui/auth/main_page.dart';
+import 'package:chrip/auth/main_page.dart';
 import 'firebase_options.dart';
 import 'pages/login_page.dart';
 

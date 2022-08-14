@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/painting.dart';
-import 'package:loginui/auth/show_images.dart';
-import 'package:loginui/auth/storage_page.dart';
-import 'package:loginui/read%20data/get_user_name.dart';
+import 'package:chrip/auth/show_images.dart';
+import 'package:chrip/auth/storage_page.dart';
+import 'package:chrip/read%20data/get_user_name.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
