@@ -4,7 +4,7 @@ An artificial ornithologist who loves to takes pictures of birds!
 
 ## Getting Started
 
-![Screenshot](\assets\images\ChripLogo.png)
+![Logo](assets\images\ChripLogo.png)
 
 This project is a starting point for this Flutter application.
 
