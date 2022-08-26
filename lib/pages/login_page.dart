@@ -45,18 +45,18 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.blue[50],
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              const Icon(
-                Icons.add_a_photo_sharp,
-                size: 100,
+              Image.asset(
+                'images/feather.png',
+                height: 300,
               ),
               const SizedBox(
-                height: 75,
+                height: 15,
               ),
 
               // Hello Again!
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
 
               const Text(
-                'Welcome back, you\'ve been missed!',
+                'Come see the birds you\'ve missed!',
                 style: TextStyle(fontSize: 24),
               ),
               const SizedBox(
@@ -161,7 +161,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Container(
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.deepPurple,
+                      color: Colors.blue[800],
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Center(

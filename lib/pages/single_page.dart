@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ShowUploads extends StatefulWidget {
+class ShowRecentUpload extends StatefulWidget {
   // gettings the userid
   String? userId;
 
-  ShowUploads({Key? key, this.userId}) : super(key: key);
+  ShowRecentUpload({Key? key, this.userId}) : super(key: key);
 
   @override
-  State<ShowUploads> createState() => _ShowUploadsState();
+  State<ShowRecentUpload> createState() => _ShowRecentUploadState();
 }
 
-class _ShowUploadsState extends State<ShowUploads> {
+class _ShowRecentUploadState extends State<ShowRecentUpload> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +22,7 @@ class _ShowUploadsState extends State<ShowUploads> {
             .collection('users')
             .doc(widget.userId)
             .collection('photos')
+            .orderBy('timestamp', descending: true)
             .snapshots(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (!snapshot.hasData) {
@@ -29,18 +30,13 @@ class _ShowUploadsState extends State<ShowUploads> {
             print(widget.userId);
             return (const Center(child: Text("No image data")));
           } else {
-            return ListView.builder(
-                itemCount: snapshot.data!.docs.length,
-                itemBuilder: (BuildContext context, int index) {
-                  String url = snapshot.data!.docs[index]['downloadURL'];
-                  print(url);
-                  print(widget.userId);
-                  return Image.network(
-                    url,
-                    height: 300,
-                    fit: BoxFit.cover,
-                  );
-                });
+            return Center(
+              child: Image.asset(
+                'images/humbird.gif',
+                height: 125,
+                width: 125,
+              ),
+            );
           }
         },
       ),
